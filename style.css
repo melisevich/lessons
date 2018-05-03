@@ -95,11 +95,12 @@ main .about{
 main .about p{
     padding: 0px 0px 48px 0px;
 }
+
 .list_left{
-    display: flex;
+    display: grid;
     padding: 64px 0px 88px 0px;
-}
-.list_title{
+}    
+wrapper .list_left h4{
     width: 20%;
     text-align: left;
     font-weight: 400;
@@ -109,10 +110,8 @@ main .about p{
     letter-spacing: 0.5px;
     font-variant: small-caps;
 }
-.list_style{
-    list-style-type: circle
-}
-main .list_middle{
+
+main .wrapper ul{
     width: 35%;
     text-align: left;
     font-weight: 400;
