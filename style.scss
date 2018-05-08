@@ -21,54 +21,51 @@ body{
 
 h1 {
     font-weight: 600;
-    font-size: 64px;
+    font-size: 4em;
     color: #fff;
-    letter-spacing: 2px;
+    letter-spacing: 0.04em;
 }
-h2 {
-
-}
-
 h3 {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 1.125em;
+    line-height: 1.75em;
     color: #B2B2B2;
-    letter-spacing: 0.5px;
-    font-variant: small-caps;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     text-align: left;
 }
 
 h4 {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 1.125em;
+    line-height: 1.75em;
     color: #B2B2B2;
-    letter-spacing: 0.5px;
-    font-variant: small-caps;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     text-align: left;
 }
 
 ul {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 1.125em;
+    line-height: 1.75em;
     color: #fff;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.04em;
     text-align: left;
+    list-style-type: circle;
+    list-style-position: outside;
 }
 
 header {
     display: flex;
     width: 70%;
-    height: 80px;
+    height: 5em;
     margin: 0 auto;
     
     .logo{
-        width: 50%;
         font-weight: 600;
-        font-size: 24px;
-        letter-spacing: 2px;
+        font-size: 1.5em;
+        letter-spacing: 0.08em;
         color: #fff;
         cursor: pointer;
         margin: auto 0;
@@ -76,23 +73,23 @@ header {
 }
 
 nav{
-    word-spacing: 20px;
+    margin-top: auto;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: auto;
     cursor: pointer;
-    margin: auto 0;
-    position: relative;
+    word-spacing: 1.5em;
 }
 
 .main-nav {
     a{
+        height: 1em;
+        margin: auto 0;
         font-weight: 400;
-        font-size: 14px;
-        letter-spacing: 0.5px;
+        font-size: 1em;
+        letter-spacing: 0.04em;
         color: #9E9E9E;
         text-align: right;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto 24px;
         &:hover{
             font-weight: 600;
             color: #fff;
@@ -103,88 +100,90 @@ nav{
     }
 }
 
+
 /* CONTENT */
-.main-about{
+.main-about {
     display: flex;
     flex-direction: column;
     width: 70%;
     margin:  120px auto;
 
-    .h1-description{
+    .h1-description {
         font-weight: 400;
-        font-size: 18px;
+        font-size: 1.125em;
         color:#B2B2B2;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.04em;
     }
-    .wrapper{
-        width: 100%;
+    .wrapper {
         margin: 0 auto;
         display: grid;
-        padding: 64px 0px 88px 0px;
-        border-bottom: 1px solid #393939;
-        .about{
-            width: 35%;
-            text-align: left;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 30px;
-            color: #fff;
-            letter-spacing: 0.5px;
-            padding: 0px 64px 0px 0px;
-            p{
-                padding: 0px 0px 48px 0px;
+        grid-template-areas:"about about about"
+                            "header header"
+                            "ux ui";
+        grid-template-rows: 100px auto;
+            & > .about {
+                text-align: left;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 30px;
+                color: #fff;
+                letter-spacing: 0.5px;
+                padding: 56px 0px;
+                    p{
+                        padding: 0px 0px 48px 0px;
+                    }
+                }
+            & > .skills {
+                font-weight: 400;
+                font-size: 1.125em;
+                line-height: 1.75em;
+                color: #fff;
+                letter-spacing: 0.04em;
+                text-align: left;
+                before: 16px;
+                padding: 56px 0px;
             }
-        }
-        .skills{
-            display: grid;
-            padding: 64px 0px 88px 0px;
-            grid-template-areas: "header header"
-                                "ux ui";
-            grid-template-rows: 100px auto;
             & > h3 {
-                color: white;
                 grid-area: header;
-            }
+                color: white;
+                padding: 32px 0;
+                }
             & > .ux {
                 grid-area: ux;
-            }
+                padding: 56px 0px; 
+                }
             & > .ui {
                 grid-area: ui;
+                padding: 56px 0px;
+                }
+        padding: 64px 0px 88px 0px;
+        border-bottom: 1px solid #393939;
             }
+    }
+@media screen and (max-width: 980px) {
+    .main_nav{
+        a{
+            display: none
+        }
+        a.icon {
+            float: right;
+            margin-top: 100px;
+            display: block;
+            color: #9E9E9E;
+            font-size: 32px;
         }
     }
-}
-
-main .pic_right{
-
-}
-
-@media screen and (max-width: 980px){
-    .main_nav a{
-        display: none
-    }
-    .main_nav a.icon {
-        float: right;
-        margin-top: 100px;
-        display: block;
-        color: #9E9E9E;
-        font-size: 32px;
-    }
-    nav{
-        width: 100%
-    }
-    .main_nav.responsive{
+    .main_nav.responsive {
         position: relative;
         top: 50px;
         left: -200px;
     }
-    header .main_nav.responsive{
+    header .main_nav.responsive {
         height: 340px;
+        a{
+            float: none;
+            display: block;
+            text-align: left;
+         }
     }
-    .main_nav.responsive a{
-       float: none;
-       display: block;
-       text-align: left;
-    }
-
 }

@@ -1,7 +1,6 @@
 {
   "name": "lessons",
   "version": "1.0.0",
-  "description": "",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/melisevich/lessons.git"
   },
-  "author": "",
+  "author": "ostolyar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/melisevich/lessons/issues"
@@ -19,5 +18,6 @@
   "homepage": "https://github.com/melisevich/lessons#readme",
   "dependencies": {
     "node-sass": "^4.9.0"
-  }
+  },
+  "description": ""
 }
